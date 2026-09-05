@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
 <title>Happy Teachers' Day ❤️</title>
 
 <style>
+
     * {
         margin: 0;
         padding: 0;
@@ -22,6 +26,7 @@
     }
 
     /* MAIN APP */
+
     .app {
         width: 100%;
         height: 100vh;
@@ -30,17 +35,22 @@
         overflow: hidden;
     }
 
-    /* EVERY SCREEN */
+    /* SCREENS */
+
     .screen {
         position: absolute;
         width: 100%;
         height: 100%;
         padding: 30px 22px;
+
         display: none;
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         text-align: center;
+
         animation: fadeIn 0.6s ease;
     }
 
@@ -48,185 +58,340 @@
         display: flex;
     }
 
+
+    /* SCREEN ANIMATION */
+
     @keyframes fadeIn {
+
         from {
             opacity: 0;
-            transform: translateX(25px);
+            transform: translateX(30px);
         }
 
         to {
             opacity: 1;
             transform: translateX(0);
         }
+
     }
 
-    /* PAGE 1 */
+
+    /* =========================
+       SCREEN 1
+    ========================= */
 
     #screen1 {
-        background: linear-gradient(135deg, #5b3a70, #9d6b91);
+
+        background:
+            linear-gradient(
+                135deg,
+                #5b3a70,
+                #9d6b91
+            );
+
         color: white;
     }
 
+
     .emoji {
-        font-size: 70px;
+
+        font-size: 75px;
+
         margin-bottom: 20px;
-        animation: floating 3s infinite ease-in-out;
+
+        animation:
+            floating 3s infinite ease-in-out;
+
     }
 
+
     @keyframes floating {
-        0%, 100% {
+
+        0%,
+        100% {
             transform: translateY(0);
         }
 
         50% {
-            transform: translateY(-12px);
+            transform: translateY(-15px);
         }
+
     }
+
 
     h1 {
+
         font-size: 42px;
+
         line-height: 1.15;
+
         margin-bottom: 18px;
+
     }
 
+
     .subtitle {
+
         font-size: 17px;
+
         line-height: 1.7;
+
         max-width: 340px;
+
         opacity: 0.9;
+
     }
+
 
     /* BUTTON */
 
     button {
+
         border: none;
+
         margin-top: 35px;
+
         padding: 16px 30px;
+
         border-radius: 50px;
+
         font-size: 16px;
+
         font-weight: bold;
+
         cursor: pointer;
+
         transition: 0.3s;
+
     }
+
 
     button:active {
+
         transform: scale(0.95);
+
     }
+
 
     .start-btn {
+
         background: white;
+
         color: #5b3a70;
+
     }
 
-    /* PAGE 2 */
+
+    /* =========================
+       SCREEN 2
+    ========================= */
 
     #screen2 {
+
         background: #fffaf5;
+
         color: #2d2d2d;
+
     }
+
 
     #screen2 h1 {
+
         font-size: 32px;
+
     }
+
 
     .memory-card {
+
         width: 100%;
+
         max-width: 380px;
+
         background: white;
+
         padding: 25px;
+
         border-radius: 20px;
+
         margin-top: 20px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+        box-shadow:
+            0 8px 25px
+            rgba(0, 0, 0, 0.08);
+
     }
+
 
     .memory-icon {
-        font-size: 45px;
+
+        font-size: 48px;
+
         margin-bottom: 12px;
+
     }
+
 
     .memory-card h2 {
+
         font-size: 23px;
+
         margin-bottom: 12px;
+
     }
+
 
     .memory-card p {
+
         font-size: 16px;
+
         line-height: 1.6;
+
         color: #666;
+
     }
+
 
     .next-btn {
+
         background: #5b3a70;
+
         color: white;
+
     }
 
-    /* PAGE 3 */
+
+    /* =========================
+       SCREEN 3
+    ========================= */
 
     #screen3 {
-        background: linear-gradient(160deg, #fff7ee, #f0d9c7);
+
+        background:
+            linear-gradient(
+                160deg,
+                #fff7ee,
+                #f0d9c7
+            );
+
         color: #333;
+
     }
+
 
     .letter {
+
         width: 100%;
+
         max-width: 420px;
-        background: rgba(255,255,255,0.85);
+
+        background:
+            rgba(255, 255, 255, 0.88);
+
         padding: 28px 22px;
+
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        box-shadow:
+            0 10px 30px
+            rgba(0, 0, 0, 0.1);
+
     }
+
 
     .letter h2 {
+
         font-size: 27px;
+
         margin-bottom: 18px;
+
         color: #5b3a70;
+
     }
+
 
     .letter p {
+
         font-size: 15.5px;
+
         line-height: 1.7;
+
         margin-bottom: 15px;
+
     }
 
+
     .final-message {
+
         font-weight: bold;
+
         font-size: 18px !important;
+
         color: #5b3a70;
+
         margin-top: 20px;
+
     }
+
 
     /* NAVIGATION DOTS */
 
     .dots {
+
         position: absolute;
+
         bottom: 25px;
+
         display: flex;
+
         gap: 8px;
+
     }
+
 
     .dot {
+
         width: 8px;
+
         height: 8px;
+
         border-radius: 50%;
+
         background: #aaa;
+
     }
 
-    .dot.active-dot {
+
+    .active-dot {
+
         width: 22px;
+
         border-radius: 10px;
+
         background: #5b3a70;
+
     }
 
-    /* MUSIC BUTTON */
+
+    /* MUSIC STATUS */
 
     .music-status {
+
         position: absolute;
+
         top: 20px;
+
         right: 20px;
-        background: rgba(255,255,255,0.2);
+
+        background:
+            rgba(255, 255, 255, 0.25);
+
         padding: 8px 13px;
+
         border-radius: 20px;
+
         font-size: 13px;
+
     }
 
 </style>
@@ -238,15 +403,28 @@
 
 ```
 <!-- =========================
-     AUDIO FILE
-     FILE NAME: song.webm
+     BACKGROUND MUSIC
+
+     FILE NAME: song.mp3
+
+     IMPORTANT:
+     Upload song.mp3 to the
+     SAME GitHub repository
+     where index.html exists.
 ========================== -->
 
 <audio id="bgMusic" loop>
-    <source src="song.webm" type="audio/webm">
+
+    <source
+        src="song.mp3"
+        type="audio/mpeg">
+
     Your browser does not support audio.
+
 </audio>
 
+
+<!-- MAIN APP -->
 
 <div class="app">
 
@@ -255,132 +433,241 @@
          SCREEN 1
     ========================== -->
 
-    <section class="screen active" id="screen1">
+    <section
+        class="screen active"
+        id="screen1">
 
-        <div class="emoji">🎓</div>
+        <div class="emoji">
+            🎓
+        </div>
+
 
         <h1>
             Happy<br>
             Teachers' Day
         </h1>
 
+
         <p class="subtitle">
-            This is a small message for every teacher
-            who has been a part of our journey.
+
+            This is a small message
+            for every teacher who has
+            been a part of our journey.
+
         </p>
 
-        <button class="start-btn" onclick="startExperience()">
+
+        <!-- SONG STARTS HERE -->
+
+        <button
+            class="start-btn"
+            onclick="startExperience()">
+
             Tap to Begin ❤️
+
         </button>
 
+
         <div class="dots">
-            <div class="dot active-dot"></div>
+
+            <div
+                class="dot active-dot">
+            </div>
+
             <div class="dot"></div>
+
             <div class="dot"></div>
+
         </div>
 
     </section>
+
 
 
     <!-- =========================
          SCREEN 2
     ========================== -->
 
-    <section class="screen" id="screen2">
+    <section
+        class="screen"
+        id="screen2">
+
 
         <div class="music-status">
+
             🎵 Music Playing
+
         </div>
 
-        <h1>Things We Remember</h1>
+
+        <h1>
+
+            Things We Remember
+
+        </h1>
+
 
         <div class="memory-card">
 
-            <div class="memory-icon">📚</div>
 
-            <h2>The Lessons</h2>
+            <div class="memory-icon">
+
+                📚
+
+            </div>
+
+
+            <h2>
+
+                The Lessons
+
+            </h2>
+
 
             <p>
-                We may not remember every chapter,
-                every definition, or every answer.
-                But we remember the people who
-                helped us understand them.
+
+                We may not remember
+                every chapter, every definition,
+                or every answer.
+
+                But we remember the people
+                who helped us understand them.
+
             </p>
 
+
         </div>
 
-        <button class="next-btn" onclick="nextScreen()">
+
+        <button
+            class="next-btn"
+            onclick="nextScreen()">
+
             Continue →
+
         </button>
 
+
         <div class="dots">
+
             <div class="dot"></div>
-            <div class="dot active-dot"></div>
+
+            <div
+                class="dot active-dot">
+            </div>
+
             <div class="dot"></div>
+
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
          SCREEN 3
     ========================== -->
 
-    <section class="screen" id="screen3">
+    <section
+        class="screen"
+        id="screen3">
+
 
         <div class="music-status">
+
             🎵 Music Playing
+
         </div>
+
 
         <div class="letter">
 
-            <h2>Dear Teachers, ❤️</h2>
+
+            <h2>
+
+                Dear Teachers, ❤️
+
+            </h2>
+
 
             <p>
-                In the middle of classes, assignments,
-                exams, attendance, and busy college days,
-                we don't always get the chance to say
-                thank you.
+
+                In the middle of classes,
+                assignments, exams, attendance,
+                and busy college days,
+                we don't always get the chance
+                to say thank you.
+
             </p>
 
-            <p>
-                But every lesson, every correction,
-                every piece of advice, and every moment
-                of encouragement has played a part
-                in our journey.
-            </p>
 
             <p>
+
+                But every lesson,
+                every correction,
+                every piece of advice,
+                and every moment of encouragement
+                has played a part in our journey.
+
+            </p>
+
+
+            <p>
+
                 Some lessons came from textbooks.
-                Others came simply from your experience,
+
+                Others came from your experience,
                 patience, and guidance.
+
             </p>
+
 
             <p class="final-message">
-                Thank you for being a part of our journey.
-                🌸
+
+                Thank you for being
+                a part of our journey. 🌸
+
                 <br><br>
-                Happy Teachers' Day to all our
-                wonderful teachers! ❤️
+
+                Happy Teachers' Day
+                to all our wonderful teachers! ❤️
+
             </p>
+
 
             <p>
-                — With Respect & Gratitude,<br>
+
+                — With Respect & Gratitude,
+
+                <br>
+
                 Your Students 🎓
+
             </p>
 
+
         </div>
 
+
         <div class="dots">
+
             <div class="dot"></div>
+
             <div class="dot"></div>
-            <div class="dot active-dot"></div>
+
+            <div
+                class="dot active-dot">
+            </div>
+
         </div>
+
 
     </section>
 
 
 </div>
+
 
 
 <!-- =========================
@@ -389,44 +676,81 @@
 
 <script>
 
+
     function startExperience() {
 
-        // GET AUDIO
-        const music = document.getElementById("bgMusic");
 
-        // START SONG
+        // GET SONG
+
+        const music =
+            document.getElementById(
+                "bgMusic"
+            );
+
+
+        // PLAY SONG
+
         music.play()
+
             .then(() => {
-                console.log("Music started successfully");
+
+                console.log(
+                    "Song started successfully!"
+                );
+
             })
+
             .catch(error => {
-                console.log("Music could not play:", error);
+
+                console.log(
+                    "Song could not play:",
+                    error
+                );
+
             });
 
 
-        // CHANGE TO SCREEN 2
-        document.getElementById("screen1")
-            .classList.remove("active");
+        // CHANGE SCREEN 1 → SCREEN 2
 
-        document.getElementById("screen2")
-            .classList.add("active");
+        document
+            .getElementById("screen1")
+            .classList
+            .remove("active");
+
+
+        document
+            .getElementById("screen2")
+            .classList
+            .add("active");
+
+
     }
+
 
 
     function nextScreen() {
 
-        // CHANGE TO SCREEN 3
 
-        document.getElementById("screen2")
-            .classList.remove("active");
+        // CHANGE SCREEN 2 → SCREEN 3
 
-        document.getElementById("screen3")
-            .classList.add("active");
+        document
+            .getElementById("screen2")
+            .classList
+            .remove("active");
+
+
+        document
+            .getElementById("screen3")
+            .classList
+            .add("active");
+
 
     }
+
 
 </script>
 ```
 
 </body>
+
 </html>
