@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* =========================
+   PAGE 1
+========================= */
+
+.welcome-page {
+    background:
+        radial-gradient(circle at top left, #7b2ff7, transparent 40%),
+        radial-gradient(circle at bottom right, #f107a3, transparent 40%),
+        #12002b;
+}
+
+.book {
+    font-size: 80px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.welcome-page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    margin-top: 20px;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 20px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.quote-box {
+    margin: 35px auto;
+    max-width: 600px;
+    padding: 20px;
+    border-left: 4px solid #ffd700;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 35px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    background: white;
+    color: #6a11cb;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.4);
+}
+
+/* =========================
+   PAGE 2
+========================= */
+
+.thank-page {
+    background:
+        linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.thank-page h1 {
+    font-size: 55px;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 35px 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    background: rgba(255,255,255,0.25);
+}
+
+.card .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+/* =========================
+   PAGE 3
+========================= */
+
+.dedication-page {
+    background:
+        linear-gradient(135deg, #141e30, #243b55);
+}
+
+.certificate {
+    background: white;
+    color: #222;
+    padding: 60px 30px;
+    border-radius: 20px;
+    border: 8px solid #d4af37;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.trophy {
+    font-size: 70px;
+}
+
+.certificate h3 {
+    font-size: 28px;
+    color: #b8860b;
+    letter-spacing: 2px;
+    margin: 15px;
+}
+
+.presented {
+    margin-top: 25px;
+    color: #777;
+}
+
+.teacher-name {
+    color: #6a11cb;
+    font-family: 'Playfair Display', serif;
+    margin: 20px;
+    font-size: 45px;
+}
+
+.line {
+    width: 100px;
+    height: 3px;
+    background: #d4af37;
+    margin: 25px auto;
+}
+
+.certificate-text {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.thank-message {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #b8860b;
+}
+
+.home {
+    display: block;
+    margin-top: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 600px) {
+
+    .welcome-page h1,
+    .thank-page h1 {
+        font-size: 40px;
+    }
+
+    .teacher-name {
+        font-size: 32px;
+    }
+
+    .certificate h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 50px 15px;
+    }
+
+}
